@@ -15,8 +15,10 @@ int main(int argc, char const *argv[])
     q.push(2);
     q.push(6);
 
-    cout<< q.front()<< endl;
-    cout<< q.back()<< endl;
+    
+    cout<< q.front()<< " ";
+    cout<< q.back()<< " ";
+    cout<<endl;
 
     while (!q.empty())
     {
@@ -24,10 +26,10 @@ int main(int argc, char const *argv[])
         q.pop();
         s.push(element);
         cout<< endl;
-        cout<< q.front()<< endl;
-        cout<< q.back()<< endl;
-        cout<< endl;
-        cout<< s.top()<< endl;
+        cout<< q.front()<< " ";
+        cout<< q.back()<< " ";
+        cout<<endl;
+        // cout<< "top main hai:- "<< s.top()<< endl;
     }
     
     cout<< endl;
