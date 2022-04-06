@@ -71,53 +71,52 @@ int main()
 }
 
 
-        vector<int> merge;
-        int l = m + n; 
-        for(int i = 0; i < m; i++)
-        {
-            merge.push_back(nums1[i]);
-        }
-
-
-        // int j = 0;
-        // for (int i = m ; i < l; i++)
+        // vector<int> merge;
+        // int l = m + n; 
+        // for(int i = 0; i < m; i++)
         // {
+        //     merge.push_back(nums1[i]);
+        // }
+
+
+        // // int j = 0;
+        // // for (int i = m ; i < l; i++)
+        // // {
             
-        //     merge.push_back(nums2[j]);
-        //     j++;
-        // }
+        // //     merge.push_back(nums2[j]);
+        // //     j++;
+        // // }
         
-        // sort(merge.begin(), merge.end());
+        // // sort(merge.begin(), merge.end());
         
-        // for(int i= 0; i< l; i++)
-        // {
-        //     cout<< merge[i]<<' ';
-        // }
-        // cout<< endl;
+        // // for(int i= 0; i< l; i++)
+        // // {
+        // //     cout<< merge[i]<<' ';
+        // // }
+        // // cout<< endl;
 
-        		int pos1 = m - 1;
-		int pos2 = n - 1;
-		int pos3 = m + n - 1;
+        // int pos1 = m - 1;
+		// int pos2 = n - 1;
+		// int pos3 = m + n - 1;
 
-		while (pos1 >= 0 && pos2 >= 0)
-		{
-			if (nums1[pos1] > nums2[pos2])
-			{
-				nums1[pos3--] = nums1[pos1--];
-			}
-			else
-			{
-				nums1[pos3--] = nums2[pos2--];
-			}
-		}
+		// while (pos1 >= 0 && pos2 >= 0)
+		// {
+		// 	if (nums1[pos1] > nums2[pos2])
+		// 	{
+		// 		nums1[pos3--] = nums1[pos1--];
+		// 	}
+		// 	else
+		// 	{
+		// 		nums1[pos3--] = nums2[pos2--];
+		// 	}
+		// }
 
-		while (pos1 >= 0)
-		{
-			nums1[pos3--] = nums1[pos1--];
-		}
+		// while (pos1 >= 0)
+		// {
+		// 	nums1[pos3--] = nums1[pos1--];
+		// }
 
-		while (pos2 >= 0)
-		{
-			nums1[pos3--] = nums2[pos2--];
-		}
-	}
+		// while (pos2 >= 0)
+		// {
+		// 	nums1[pos3--] = nums2[pos2--];
+		// }
