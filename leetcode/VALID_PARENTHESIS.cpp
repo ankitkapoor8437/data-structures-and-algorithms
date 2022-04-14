@@ -1,45 +1,50 @@
-#include<iostream>
-#include<string>
-#include<stack>
-using namespace std;
-
-int main()
-{
-    string s = "()[]{}";
-
-    stack<char> st;
-
-    for (int i = 0; i < s.length(); i++)
-    {
-        st.push(i);
-    }
-    
-    cout<< st.top()<< endl;
-    cout << st.size() << endl;
-
-
-    int count = 0;
-    while (!st.empty())
-    {
-        if (st.top()== ')' || st.top()== '}' || st.top()== ']')
+class Solution {
+public:
+    bool isValid(string s) {
+        
+//         created a stack to push the string s
+        stack<char> st;
+        
+//         traversing the string s
+        for(int i=0; i<s.length(); i++)
         {
-            st.pop();
-            count++;
+            char ch = s[i];
+//             if openening bracket, stack push
+            
+            if(ch == '(' || ch == '{' || ch == '[')
+            {
+                st.push(ch);
+            }
+//          check the other condition
+            else
+            {
+//                 if closing bracket, stack ka top check kro and pop kro
+                if(!st.empty())
+                {
+                    char top = st.top();
+                    if((ch == ')' && top == '(') || (ch == '}' && top == '{') || (ch == ']' && top == '['))
+                    {
+                        st.pop();
+                    }
+                    else
+                    {
+                        return false;
+                    }
+                }
+                else
+                {
+                    return false;
+                }
+            }
         }
-        if (st.top()== '(' || st.top()== '{' || st.top()== '[')
+        
+        if(st.empty())
         {
-            st.pop();
-            count--;
+            return true;
+        }
+        else
+        {
+            return false;
         }
     }
-    
-    if(count==0)
-    {
-        cout<< "true";
-    }
-    else{
-        cout<< "false";
-    }
-
-    return 0;
-}
+};
