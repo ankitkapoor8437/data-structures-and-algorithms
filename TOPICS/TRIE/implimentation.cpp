@@ -6,7 +6,7 @@ class TrieNode
     //Data members for the Trie data structure
     public:
         char data;
-        TrieNode* children[26];
+        TrieNode* children[26]; 
         bool isTerminal;
 
         //if the we are at the starting which means NULL so we are making isTerminal is false
